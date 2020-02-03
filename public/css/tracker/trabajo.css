@@ -1,0 +1,45 @@
+
+.oferta_laboral{
+    height:120px;
+    border:1px solid rgb(150, 141, 141);
+    background-color: #106BA0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0.1px rgba(0, 0, 0, 0.5) ;
+    cursor: pointer;
+}
+.img_trabajo{
+    position: relative;
+    border-radius: 0px 0px 0px 0px !important;
+}
+.card-img-overlay{
+    border-radius: 0px 0px 0px 0px !important;
+}
+#subir_curriculum{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+}
+label[for="subir_curriculum"]{
+    content: "Hola";
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #106BA0;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 15px 40px !important;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    border-radius: 10px;
+    }
+    .contenedor_trabajo{
+        position: relative;
+    }
+    .contenedor-navbar{
+      position: relative!important
+    }

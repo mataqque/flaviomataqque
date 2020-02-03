@@ -1,0 +1,191 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+.interlineado>a{
+    text-decoration: none;
+}
+.fondo-nubes{
+    background-image: url("/img/fondo_nubes.jpg");
+    /* background-size: cover; */
+    background-repeat: no-repeat;    
+    width: 100%;
+    height: 100vh;
+}
+.contenedor-navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.background,.background{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* secction informacion_first */
+.informacion_first{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.contenedor-global{
+    position: relative;
+    background: transparent;
+    width: 100%;
+}
+.redes_sociales{
+    position: fixed;
+    top: 30%;
+    right: 0px;
+    /* background: rgb(21, 21, 92); */
+    width: 200px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    z-index:998;
+    
+}
+.redes_sociales>a{
+    position: relative;
+    padding: 15px;
+    background:  rgb(30, 30, 105);
+    border-radius: 10px 0px 0px 10px;
+    margin:3px 0px 3px 0px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    left:150px;
+}
+.redes_sociales>a>i{
+    color:white;
+    font-size: 25px;
+    padding-left: 4px
+}
+
+.redes_sociales>a:hover{
+    position: relative;
+    left: 0px;
+    transition-duration: 0.5s
+
+}
+
+
+.icon-box5>div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 12px;
+}
+.icon-box5>div>i{
+    padding: 20px;
+    background: rgb(40, 41, 49);
+    border-radius: 10px;
+    color: white;
+    font-size:23px;
+}
+.icon-box5>h4{
+    color: black;
+    text-align: center;
+}
+.valores{
+    padding: 50px 20px;
+    background: white;
+}
+.interlineado>a>article:hover>div,.icon-box5>div>i:hover{
+    color:rgb(255, 255, 255);
+    text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1);
+}
+.contactanos{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width :466px) and (max-width :767px){
+    .contenedor-first>.row{
+        position: absolute!important;
+        top:50px!important
+    }
+ }
+@media (max-width :767px){
+    .contenedor-first>.row{
+        position: relative;
+        top:100px;
+    }
+    .informacion_first{
+        position: relative;
+        box-sizing: content-box;
+        min-height:700px;
+        height: auto;
+    }
+    .contenedor-first{
+        position: absolute!important;
+        top: 0%;
+        height: auto;
+    }
+    .information-text>h3{
+        font-size: 20px;
+    }
+    .information-text>p{
+        font-size:16px;
+        color: dimgrey
+    }
+    .contactanos{
+        height: auto;
+    }
+}
+
+/* real time */
+.real-time{
+    background: transparent;
+    padding: 20px;
+}
+/* reporting */
+.reporting{
+    background: white;
+}
+/* CONTACTANOS */
+.contactanos{
+    padding: 50px 0px 0px 0px;
+    background: rgb(231, 231, 231);
+    height: auto;
+}
+.contactanos>div>div>div>ul>li>a{
+    position: relative;
+    padding: 0px 30px;
+    height: 40px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.contactanos>div>div>div>ul>li>a:hover{
+    color: blue
+}
+.contactanos>div>div>div>ul>li{
+    text-align: center
+}
+.contacto{
+    position: relative;
+    background: rgb(62, 56, 146);
+    bottom: 0;
+    width: 60%;
+    height:40px;
+    border-radius: 40px 40px 0px 0px;
+    align-self: center;
+}
