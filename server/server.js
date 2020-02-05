@@ -12,7 +12,7 @@ router.get("/",(req,res)=>{
     req.connection.remoteAddress || 
     req.socket.remoteAddress ||
     (req.connection.socket ? req.connection.socket.remoteAddress : null);
-      let data = {ip:ip}
+      let data = {ip:ip,fecha:new Date}
       db.collection("IPS-VISITAS").doc(data.ip).set(data)
     res.render("index");
 });
