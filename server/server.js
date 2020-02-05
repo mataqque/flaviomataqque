@@ -13,7 +13,7 @@ router.get("/",(req,res)=>{
     req.socket.remoteAddress ||
     (req.connection.socket ? req.connection.socket.remoteAddress : null);
       let data = {ip:ip}
-      db.collection("IPS-VISITAS").doc().set(data)
+      db.collection("IPS-VISITAS").doc(data.ip).set(data)
     res.render("index");
 });
  router.get("/spanky",(req,res)=>{
