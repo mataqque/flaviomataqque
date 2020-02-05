@@ -18,5 +18,6 @@ app.engine('hbs',exphbs({
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,"public")))
 
+
 app.use("/",require("./server/server"));
 app.listen(PORT,console.log(PORT))

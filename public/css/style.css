@@ -43,6 +43,7 @@ body::-webkit-scrollbar-thumb{
     color: white;
 }
 .redes>a{width: 50px;}
+.redes>a:hover{color: white!important;}
 .twitter{background: #55ADED;color: white;}
 .facebook{background: blue;color: white;}
 .github{background: black;color: white;}
