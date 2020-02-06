@@ -4,7 +4,15 @@
 }
 * li{margin: 0; padding: 0; list-style: none;}
 
-body{background:#292929;overflow-y:scroll;}
+body{background:linear-gradient(#00295e,#015555);overflow-y:scroll;}
+#particles-js{position: absolute;
+    height: 100%;
+    width: 100%;
+}
+@keyframes flavio{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(180deg);}
+}
 body::-webkit-scrollbar{
     width: 14px;
 }
@@ -47,12 +55,12 @@ body::-webkit-scrollbar-thumb{
 .twitter{background: #55ADED;color: white;}
 .facebook{background: blue;color: white;}
 .github{background: black;color: white;}
-.pinterest{background: #CB2027;color: white;}
+.pinterest{background: #CB2027;color: white;position: absolute;}
 
 .contenedor-layout{
     height: auto;
     width: 100%;
-    background: #292929;
+    background: transparent;
 }
 .contenedor-layout>div,.contenedor-layout>div>div{height: 100%;}
 .content_imagen{height: 210px;width: 100%;overflow-y: scroll;
@@ -83,3 +91,5 @@ body::-webkit-scrollbar-thumb{
     background: rgba(0, 0, 0, 0.514);
 
 }
+
+/*  */
