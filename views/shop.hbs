@@ -1,6 +1,6 @@
 <div class="container px-lg-5 px-sm-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="" id="navbarcontent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                       <a class="nav-link" href="#"><i class="fa fa-phone"></i> (+51) 946 008 051</a>
@@ -36,15 +36,21 @@
                 </div>
             </nav>
             <section class="contenedor-home">
-                <div class="imagen-home">
-                  <img src="/img/home.jpg" alt="">
+                <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div><img src="/img/home3.jpg" id="lastClone" alt=""></div>
+                    <div><img src="/img/home.jpg" alt=""></div>
+                    <div><img src="/img/home2.jpg" alt=""></div>
+                    <div><img src="/img/home3.jpg" alt=""></div>
+                    <div><img src="/img/home.jpg" id="firstClone" alt=""></div>            
                 </div>
-                <div class="boton"> <i class="fas fa-angle-right text-dark"></i></div>
-                <div class="boton1"> <i class="fas fa-angle-left"></i></div>
+                </div>
+                <div class="boton" id="prevBtn"> <i class="fas fa-angle-right text-dark"></i></div>
+                <div class="boton1" id="nextBtn"> <i class="fas fa-angle-left"></i></div>
               </section>
             <div class="d-flex navbar-shop navbar-dark bg-dark navbar-expand-lg">
                 <a class="navbar_brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,7 +59,7 @@
                     </a>
                   </div>
                     <div class="items-shop px-3">
-                    <a href="">
+                    <a href="#">
                       SHOP <i class="fas fa-caret-down pl-1"></i>
                     </a> 
                     <div class="contenedor-shop mostrar">
@@ -67,8 +73,8 @@
                     </div>
                     </div>
                     <div class="items-shop px-3">
-                    <a href="">
-                      SHOP <i class="fas fa-caret-down pl-1"></i>
+                    <a href="#">
+                      SHOP LIST <i class="fas fa-caret-down pl-1"></i>
                     </a> 
                     <div class="contenedor-shop mostrar">
                         <ul>
@@ -81,8 +87,8 @@
                     </div>
                     </div>
                     <div class="items-shop px-3">
-                    <a href="">
-                      SHOP <i class="fas fa-caret-down pl-1"></i>
+                    <a href="#">
+                      SHOP SKIRTS<i class="fas fa-caret-down pl-1"></i>
                     </a> 
                     <div class="contenedor-shop mostrar">
                         <ul>
@@ -95,8 +101,8 @@
                     </div>
                     </div>
                     <div class="items-shop px-3">
-                    <a href="">
-                      SHOP <i class="fas fa-caret-down pl-1"></i>
+                    <a href="#">
+                      SHOP GLASES<i class="fas fa-caret-down pl-1"></i>
                     </a> 
                     <div class="contenedor-shop mostrar">
                         <ul>
@@ -113,14 +119,14 @@
           <section class="container">
                 <div class=" categoria bg-light row px-lg-4">
                 <div class="item_categoria col-sm-12 col-lg-4"><div><img src="/img/featured_img_1.webp" alt=""><a class="botton-categoria" href="#"><p>Men's shirts</p><span>40% desc.</span></a></div></div>
-                <div class="item_categoria col-sm-12 col-lg-4"><div><img src="/img/featured_img_1.webp" alt=""><a href="#"  class="botton-categoria"><p>Men's shirts</p><span>40% desc.</span></a></div></div>
-                <div class="item_categoria col-sm-12 col-lg-4"><div><img src="/img/featured_img_1.webp" alt=""><a href="#"  class="botton-categoria"><p>Men's shirts</p><span>40% desc.</span></a></div></div>
+                <div class="item_categoria col-sm-12 col-lg-4"><div><img src="/img/images.jpg" alt=""><a href="#"  class="botton-categoria"><p>children's shirts</p><span>40% desc.</span></a></div></div>
+                <div class="item_categoria col-sm-12 col-lg-4"><div><img src="/img/images2.jpg" alt=""><a href="#"  class="botton-categoria"><p>woman's pants</p><span>40% desc.</span></a></div></div>
             </section>
             <div class="columns">
                 <h3 class="h4 m-0 text-colums">New Arrivals</h3>
                 <span class="linea"></span>
             </div>
-        <section class="pt-lg-2 container modelos pb-3 pt-2">
+        <section class="pt-lg-2  modelos pb-3 pt-2">
                 <ul class="row container m-0">
         <li class="col-sm-12 col-md-6 col-lg-3 lista-shop m-0 pb-3">
         <div class="mediaholder">
@@ -210,21 +216,23 @@
       <section class="container contendor_others pb-3">
             <div class="row px-lg-4">
                 <div class="col-md-4">
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p>
+                     <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    <span><strong>130.00$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par4hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>50.00$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par5hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>140.00$</strong></span></div></div >
 
                 </div>
                 <div class="col-md-4">
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par6hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>40.00$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par7hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>49.90$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par8hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>75.90$</strong></span></div></div >
 
                 </div>
                 <div class="col-md-4">
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
-                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div><p>Canvas Backpack</p><span><strong>50$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par9hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>150.00$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>50.90$</strong></span></div></div >
+                    <div class="contenedor_mini"><img src="/img/par3hover.jpg" alt=""><div class="d-flex flex-column align-items-start"><p>Canvas Backpack</p> <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span><strong>99.90$</strong></span></div></div >
 
                 </div>
 

@@ -51,7 +51,8 @@ body{
     box-shadow: none;
 }
 .items-shop:nth-child(1){
-    background: rgba(39, 39, 39, 0.774);
+    background: rgba(44, 44, 44, 0.773);
+    color: rgb(214, 214, 214);
 }
 .navbar-shop{
     width: 100%;
@@ -184,24 +185,46 @@ body{
     align-items: center;
     justify-content: center;
 }
-.contenedor-home>div{height: 300px;width: 100%;}
-.contenedor-home>div,img{
+.carousel-container{
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    overflow: hidden;
+}
+.carousel-slide{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    position: relative;
+}
+.carousel-slide>div{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.carousel-slide>div>img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
 
-    }
 .boton,.boton1{
     display: flex;
     height: 40px!important;
     width: 50px!important;
-    background: white;
+    background: rgba(36, 36, 36, 0.699);
     z-index: 10;
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     cursor: pointer;
+}
+.boton>i,.boton1>i{
+    color: white!important;
 }
 .boton{left: 0;align-items: center;justify-content: center;font-size: 26px;
     border-radius: 0px 4px 4px 0px;}
@@ -311,6 +334,7 @@ body{
 }
 .contenedor_mini>img{
     width: 80px;
+    min-width: 80px;
     height: 100%;
     position: relative;
 }
@@ -330,7 +354,44 @@ body{
 .card-body{
     font-size: 14px;
 }
+#navbarcontent{
+    width: 100%;
+    display: flex;
+}
+@media (max-width:991px){
+    .navbar-expand-lg:nth-child(1){
+        display: none;
+    }
+    .items-shop{
+        height: auto;
+    }
+    .contenedor-shop{
+        position: relative;
+        top: 0;
+        border: 0;
+        background: transparent;
+        border: 0!important;
+    }
+    .listado{
+        background:transparent;
+        text-align: center;
+    }
+    .navbar-shop{
+        display: block!important;
+        padding: 4px 0px ;
+    }
+    .contenedor-home{
+        position: relative;
+        top: 0;
+    }
+}
 @media (max-width:768px){
+    .navbar-expand-lg:nth-child(1){
+        display: none;
+    }
+    .navbar-shop{
+        display: block!important;
+    }
     .categoria{
         padding: 10px 30px;
     }
@@ -368,5 +429,19 @@ body{
         height:100%;width: 100%;
     }
     .navbar-dark{position: fixed;}
+    .items-shop{
+        height: auto;
+    }
+    .contenedor-shop{
+        position: relative;
+        top: 0;
+        border: 0;
+        background: transparent;
+        border: 0!important;
+    }
+    .listado{
+        background:transparent;
+        text-align: center;
+    }
 }
  

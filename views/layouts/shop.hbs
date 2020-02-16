@@ -9,9 +9,78 @@
     <script src="https://kit.fontawesome.com/6611670d58.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://assets.woorank.com/assets/img/favicon.ico" type="image/x-icon">
-    <title>Spanky</title>
+    <title>Shopy</title>
 </head>
 <body>
     {{{body}}}
+    <script>
+        const carouselSlide = document.querySelector(".carousel-slide");
+const carouselImage = document.querySelectorAll(".carousel-slide img");
+
+const prevBtn = document.querySelector("#prevBtn");
+const nextBtn = document.querySelector("#nextBtn");
+
+let counter = 0;
+const size = carouselImage[0].clientWidth;
+
+// carouselSlide.style.transform = "translateX("+(-size*counter)+"px)";
+
+nextBtn.addEventListener("click",()=>{
+        if(counter>=carouselImage.length -1 ) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        console.log(counter);
+        carouselSlide.style.transform = "translateX("+(-size*counter)+"px)";
+        clearInterval(moveslide);
+        moveslide = setInterval(function(){
+        if(counter>=carouselImage.length -1 ) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        console.log(counter);
+        carouselSlide.style.transform = "translateX("+(-size*counter)+"px)"
+    },4000);
+
+    });
+
+    prevBtn.addEventListener("click",()=>{
+        if(counter<=0) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter--;
+        console.log(counter);
+        carouselSlide.style.transform = "translateX("+(-size*counter)+"px)";
+        clearInterval(moveslide);
+        moveslide = setInterval(function(){
+        if(counter>=carouselImage.length -1 ) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        console.log(counter);
+        carouselSlide.style.transform = "translateX("+(-size*counter)+"px)"
+    },4000);
+
+    });
+
+carouselSlide.addEventListener("transitionend",()=>{
+    console.log("fired")
+    if(carouselImage[counter].id=="lastClone"){
+        carouselSlide.style.transition ="none";
+        counter = carouselImage.length -2;
+        carouselSlide.style.transform = "translateX("+(-size*counter)+"px)";
+    }
+    if(carouselImage[counter].id=="firstClone"){
+        carouselSlide.style.transition ="none";
+        counter = carouselImage.length - counter;
+        carouselSlide.style.transform = "translateX("+(-size*counter)+"px)";
+    }
+});
+var moveslide;
+    moveslide = setInterval(function(){
+        if(counter>=carouselImage.length -1 ) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        console.log(counter);
+        carouselSlide.style.transform = "translateX("+(-size*counter)+"px)"
+    },4000);
+
+    </script>
 </body>
 </html>
