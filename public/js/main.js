@@ -42,22 +42,46 @@ document.querySelector(".btn-side").addEventListener("click",()=>{
 document.getElementById("send-message").addEventListener("click",(event)=>{
         event.preventDefault();
         let getMessage = document.getElementById("get-message").value;
+        crear_Mensaje("text-enviado",getMessage);
+    });
+    function crear_Mensaje(e,getMessage){ 
         let contenedor = crear_complemento();
         var item = document.createElement('div');
         item.textContent=getMessage;
-        item.className = "text-enviado";
+        item.className = e;
         contenedor.appendChild(item)
         document.getElementById("show-message").scrollTop = document.getElementById("show-message").scrollHeight;
-    });
-
+    }
     function crear_complemento(){
-        var contenedor = document.createElement('div');
+        let contenedor = document.createElement('div');
         contenedor.className = "contenedor-enviado";
         document.getElementById("show-message").appendChild(contenedor);
-        var complemento = document.createElement('div');
+        let complemento = document.createElement('div');
         complemento.className ="complemento";
-        contenedor.appendChild(complemento)
+        contenedor.appendChild(complemento);
+        let complemento2 = document.createElement("div");
+        complemento2.className ="triangule";
+        contenedor.appendChild(complemento2);
         return contenedor;
     }
+
+    $("#send-message").click(function(event){
+        event.preventDefault();
+        let getChat = document.getElementById("get-message").value; 
+        $.post({
+            url:'http://localhost:3000/',
+            data: {text:getChat},
+            success: function(msg) {
+                let getMessage = msg.result.output.generic[0].text;
+                crear_Mensaje("text-recivido",getMessage);
+            }
+          });
+        });
 // enviar al ultimo
+        document.querySelectorAll(".point")[0].addEventListener("click",minimizarChat);
+        function  minimizarChat(){
+                document.getElementById("chat").classList.add("minimizar")
+                
+        }
+
     initParticles();

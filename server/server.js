@@ -1,6 +1,9 @@
 const router = require("express").Router();
-const admin = require("firebase-admin")
-var serviceAccount = require("../firebaseclave.json");
+const admin = require("firebase-admin");
+const assistant = require("../ibm-watson/credencial");
+const serviceAccount = require("../firebaseclave.json");
+const assistantId = "94fb2d63-6ead-44cd-899b-e182c2fa2345";
+
 var ip;
 const appAdmin =  admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -16,6 +19,39 @@ router.get("/",(req,res)=>{
       db.collection("IPS-VISITAS").doc(data.ip).set(data)
     res.render("index");
 });
+
+router.post("/",(req,res)=>{
+   console.log(res.body);
+   (function DevolverSession(){
+     assistant.createSession({assistantId:assistantId},
+       function(error, response){
+         if (error) {
+           return error;
+         } else {
+           console.log(response.result.session_id)
+           EnviarMessage(response.result.session_id)
+         }
+       });
+   })();
+   function EnviarMessage(DatoText){
+      var payload = {
+          assistantId: assistantId,
+          sessionId: DatoText,
+          input: {
+            message_type: 'text',
+            text: req.body.text,
+          },
+        };
+          assistant.message(payload,function(err,data){
+              if (err) {
+                  res.send(err);
+            }else{
+              res.send(data);
+            }  
+      })
+   }
+});
+
  router.get("/spanky",(req,res)=>{
     res.render("spanky",{layout:"spanky"})
  });
@@ -29,5 +65,6 @@ router.get("/",(req,res)=>{
  router.get("/pinterest",(req,res)=>{
     res.render("pinterest",{layout:"pinterest"})
  });
+
 
 module.exports = router;
