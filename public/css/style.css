@@ -211,8 +211,9 @@ body::-webkit-scrollbar-thumb{
     .navbar-nav{
         height: auto!important;
         margin: 10px 0px;
-        z-index: 999;
+        
     }
+    .navbar{z-index: 999!important;}
     .redes{
         position: relative;
         display: flex;
