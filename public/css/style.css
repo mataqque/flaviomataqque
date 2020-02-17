@@ -174,9 +174,173 @@ body::-webkit-scrollbar-thumb{
     width: 40px;
     border: 1px solid;
 }
+/*  CHABOT*/
+.chatbot{
+    position: fixed;
+    height: 390px;
+    width: 280px;
+    bottom: 0em;
+    right: 0;
+}
+
+li{list-style: none;padding:2px 20px;}
+* p{margin: 0;}
+*{box-sizing: border-box;}
+#chat{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;right: 30px;
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.226);
+}
+#status{
+    width: 100%;
+    min-height: 30px;
+    height: auto;
+    position: relative;
+    background:#0A162D;
+    border-radius: 8px 8px 0px 0px;
+    z-index: 2;
+    top:0.4px;
+    display:flex;
+    flex-direction:column;
+    cursor: pointer;
+    align-items: center;
+    
+}
+#status>div{
+    width: 100%;display: flex;flex-direction: row;height: 50%;display: flex;
+    min-height: 32px;
+    align-items: center;
+    padding: 5px 10px ;
+}
+#status>div>.usuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    flex-grow: 1;
+    color:white;
+    font-weight: bold;
+}
+.usuario p{
+    font-weight: 500;
+    font-size:15px;
+}
+#identity{
+    position: relative;
+    height: 50px!important;
+    min-height: 50px!important;
+    width: 100%;
+    background: #f5f4f4;
+    padding: 0!important;
+    /* box-shadow: 0px 0px 10px 0px black; */
+}
+#identity:after {
+    content:"";
+    position:absolute;
+    width:100%;
+    bottom:1px;
+    z-index:-1;
+    left: -10px;
+    transform:scale(.99);
+    box-shadow: 10px 0px 10px 1px #000000;
+}
+#identity>div>img{
+    height: 100px;
+    width: 100px;
+}
+#identity p{color: rgb(109, 109, 109);font-size: 13px;}
+
+
+#show-message{
+    /* height:87%; */
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    background: url("/img/fondo_nubes.jpg");
+    background-size: cover;
+    border-bottom: 1px solid rgba(124, 124, 124, 0.274);
+    overflow-y: scroll;
+    padding: 0px 10px;
+}
+#content-message{
+    height: 13%;
+    width: 100%;
+    position: relative;
+    display:flex;
+    flex-direction: row;
+}
+#show-message::-webkit-scrollbar {
+    width: 7px; 
+}
+#show-message::-webkit-scrollbar-thumb {
+    background:rgb(77, 77, 77);
+    border-radius: 4px;
+}
+#show-message::-webkit-scrollbar-track {
+    background: #b3b3b398;
+}
+
+
+#get-message{
+    border: 0px;
+    padding: 10px 0px 10px 10px;
+    font-size: 16px;
+    flex-grow: 1;
+}
+#get-message:focus{
+    outline: none;
+}
+#send-message{border: 0px;background: rgba(255, 255, 255, 0.61);width: 40px;}
+.point{
+    position: relative;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    right: 0px;
+    margin: 2px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.point>img{
+    position :relative;
+    height: 100%;
+    width: 100%;
+}
+.contenedor-enviado{
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+.complemento{
+    flex-grow: 1;
+    order:2
+}
+.text-enviado{
+    padding: 10px;
+    border-radius: 7px 0px 7px 7px;;
+    color:white;
+    order: 3;
+    background: rgba(0, 128, 0, 0.527);
+}
+.text-recivido{
+    padding: 10px;
+    border-radius: 7px;
+    color:white;
+    order: 1;
+}
+/*  CHATBOT*/
 
 /* fin  */
-
+/* RESPOSIVE */
 
 
 @media (max-width:1500px){

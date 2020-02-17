@@ -37,4 +37,27 @@ document.querySelector(".btn-side").addEventListener("click",()=>{
         document.querySelector(".side-animation").style ="display:none" 
 })
 
-initParticles()
+
+
+document.getElementById("send-message").addEventListener("click",(event)=>{
+        event.preventDefault();
+        let getMessage = document.getElementById("get-message").value;
+        let contenedor = crear_complemento();
+        var item = document.createElement('div');
+        item.textContent=getMessage;
+        item.className = "text-enviado";
+        contenedor.appendChild(item)
+        document.getElementById("show-message").scrollTop = document.getElementById("show-message").scrollHeight;
+    });
+
+    function crear_complemento(){
+        var contenedor = document.createElement('div');
+        contenedor.className = "contenedor-enviado";
+        document.getElementById("show-message").appendChild(contenedor);
+        var complemento = document.createElement('div');
+        complemento.className ="complemento";
+        contenedor.appendChild(complemento)
+        return contenedor;
+    }
+// enviar al ultimo
+    initParticles();
