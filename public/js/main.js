@@ -70,7 +70,7 @@ document.getElementById("send-message").addEventListener("click",(event)=>{
         event.preventDefault();
         let getChat = document.getElementById("get-message").value; 
         $.post({
-            url:'http://localhost:3000/',
+            url:window.location.href,
             data: {text:getChat},
             success: function(msg) {
                 let getMessage = msg.result.output.generic[0].text;
