@@ -42,19 +42,20 @@ document.querySelector(".btn-side").addEventListener("click",()=>{
 document.getElementById("send-message").addEventListener("click",(event)=>{
         event.preventDefault();
         let getMessage = document.getElementById("get-message").value;
-        crear_Mensaje("text-enviado",getMessage);
+        document.getElementById("get-message").value="";
+        crear_Mensaje("text-enviado","contenedor-enviado",getMessage);
     });
-    function crear_Mensaje(e,getMessage){ 
-        let contenedor = crear_complemento();
+    function crear_Mensaje(e,Send,getMessage){ 
+        let contenedor = crear_complemento(Send);
         var item = document.createElement('div');
         item.textContent=getMessage;
         item.className = e;
         contenedor.appendChild(item)
         document.getElementById("show-message").scrollTop = document.getElementById("show-message").scrollHeight;
     }
-    function crear_complemento(){
+    function crear_complemento(e){
         let contenedor = document.createElement('div');
-        contenedor.className = "contenedor-enviado";
+        contenedor.className = e;
         document.getElementById("show-message").appendChild(contenedor);
         let complemento = document.createElement('div');
         complemento.className ="complemento";
@@ -73,15 +74,27 @@ document.getElementById("send-message").addEventListener("click",(event)=>{
             data: {text:getChat},
             success: function(msg) {
                 let getMessage = msg.result.output.generic[0].text;
-                crear_Mensaje("text-recivido",getMessage);
+                crear_Mensaje("text-recivido","contenedor-recivido",getMessage);
             }
           });
         });
 // enviar al ultimo
         document.querySelectorAll(".point")[0].addEventListener("click",minimizarChat);
         function  minimizarChat(){
-                document.getElementById("chat").classList.add("minimizar")
-                
+        if(document.querySelector(".point").id=="false"){
+                document.querySelectorAll(".chatbot")[0].classList.add("minimizar");
+                document.getElementById("status").classList.add("status-show");
+                document.querySelector("#identity>div").classList.add("show-bot");
+                document.querySelector(".point").innerHTML='<img src="img/maximizar.svg">'
+                document.querySelector(".point").id = "true";
         }
-
+                else if(document.querySelector(".point").id=="true"){
+                        document.querySelectorAll(".chatbot")[0].classList.remove("minimizar");
+                        document.getElementById("status").classList.remove("status-show");
+                        document.querySelector("#identity>div").classList.remove("show-bot");
+                        document.querySelector(".point").innerHTML='<img src="img/minimizar.svg">'
+                        document.querySelector(".point").id = "false";
+                }
+        }
+                
     initParticles();
